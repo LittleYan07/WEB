@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //類別繼承
+        //男生,女生 => 人 (抽象化=將相同東西抽出來)
+
+        class Person {
+            #name;
+            #age;
+            #address;
+            #tel;
+            constructor(name, age, address, tel) {
+                this.#name = name;
+                this.#age = age;
+                this.#address = address;
+                this.#tel = tel;
+            }
+
+            //方法(物件的功能)
+            Walk() {
+                return "走路";
+            }
+            Run() {
+                return "跑步";
+            }
+            Eat() {
+                return "吃東西";
+            }
+            Jump() {
+                return "跳躍";
+            }
+        }
+
+        class Male extends Person {
+            
+            constructor(name, age, address, tel) {
+                super(name, age, address, tel);
+            }            
+
+            //專屬男生的方法
+            SleepAllDay() {
+                return "睡整天覺";
+            }
+        }
+
+
+        class Female extends Person{
+
+            constructor(name, age, address, tel) {
+                super(name, age, address, tel);
+            }
+
+            //專屬女生的方法
+            Sleep() {
+                return "睡美容覺";
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////
+
+        //相同物件
+        let jack = new Male("Jack", 18, "台北", "0912345678");  //物件
+        let john = new Male("John", 20, "台中", "0987654321");  //物件
+        let bob = new Male("bob", 25, "高雄", "0912345678");    //物件
+
+        jack.Run();
+        john.Run();
+        bob.SleepAllDay();
+
+        let mary = new Female("Mary", 18, "台北", "0912345678");  //物件
+        let mar = new Male("Mar", 20, "台中", "0987654321");  //物件
+        let natasha = new Male("Natasha", 25, "高雄", "0912345678");    //物件
+
+        may.Sleep();
+
+    </script>
+</body>
+</html>

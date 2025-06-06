@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--  selector 選擇器 -->
+    <!--  CSS基底的三種選擇器:
+      1.Tap Selector 標籤選擇器
+      2.Class Selector 類別選擇器
+      3.ID Selector ID選擇器 只能有唯一一個ID Name  -->
+      <!-- 先比選擇器，再比寫的次序(後面會蓋掉前面的) -->
+
+    <style>
+        /* 一樣屬性時，互相衝突的時候依照類別選擇器 & 不一樣屬性時，會一起保留 */
+        /* ID跟標籤衝突時，以ID為優先 (ID > Class > Tap) */
+        
+        /* ID選擇器 */
+        #John{
+            font-size: 1 rem;
+        }
+        
+        #Mary {
+            color: crimson;
+        }
+        
+        .Jack{
+            color: blue;
+            background-color:aliceblue
+        }
+
+        .h1 {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        .aaa {
+            color: orangered;
+        }
+
+        h1 {
+            color: red;
+            background-color: yellow;
+            font-size: 5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Class Combine -->
+    <div class="h1 Jack aaa">Welocome</div>
+
+    <div class="h1" id="John">Welocome</div>
+    <h1 id="Mary">Welocome</h1>
+    <h1>Welocome</h1>
+    <h1 class="Jack">Welocome</h1>
+    <p class="Jack">Welocome</p>
+    <div class="h1">Welocome</div>
+
+
+</body>
+
+</html>

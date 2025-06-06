@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let t = function() {                  
+            console.log(111);
+        }
+
+        setInterval(t, 1000);
+
+        //////////////////////////////
+
+        //=> 箭頭函數
+
+        setInterval( () => {                  
+            console.log(222);
+        }, 1000);
+
+
+        //有預設值的函數(如果沒有參數，則帶入預設值1 & 2)
+        /* function plus(a = 1, b = 2) {
+            console.log(a + b);
+        } */
+
+        let plus = (a = 1, b = 2) => {
+            console.log(a + b);
+        }
+
+        plus();
+        plus(3);
+        plus(3,4);
+
+        //////////////////////////////
+        
+        /* (1) function welcome(name) {
+            console.log("Hello " + name + "!");
+        } */
+        
+        /* (2) let welcome = function(name) {
+            console.log("Hello " + name + "!");
+        } */
+
+        /* (3) let welcome = (name) => {
+            console.log("Hello " + name + "!");
+        } */
+
+        /* (4) let welcome = name => {
+            console.log("Hello " + name + "!");
+        } */
+
+        /* (5) let welcome = name =>
+            console.log("Hello " + name + "!"); */
+        
+        let welcome = name => console.log("Hello " + name + "!");
+
+        welcome();
+
+        //////////////////////////////
+
+        let f = [2, 1, 3];
+        for(let item of f) {
+            console.log(item * item);
+        }
+
+        let g = f.map(i => i * i);
+        //(i => i * i)為一個function
+        //f.map(function(i) { return i * i; })               
+
+        console.log(g);
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    
+    <style>
+        .jumbotron {
+            background-image: url('photo/00.jpg');
+            background-repeat: round;
+        }
+        .textShadow {
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+
+<!-- Jumbotron -->
+
+<body>
+    <div class="container d-none"> <!-- display-none 隱藏顯示(禁止複製) -->
+        <div class="bg-secondary-subtle p-5 mt-3 rounded shadow jumbotron">
+            <!-- -3 = 16px -->
+            <!-- ps-5 :padding-start / pe-5 :padding-end / px-5 :水平上下-->
+            <!-- margin-top -->
+
+            <h1 class="fw-bold text-white textShadow">Hello, world!</h1>
+            <!-- fw-: font-weight 字體粗度 -->
+            <p class="text-white textShadow"><strong>HERE!</strong></p>
+            <hr>
+
+            <button class="btn btn-success btn-lg">了解更多</button>
+            <!-- btn-lg 按鈕變大 -->
+        </div>
+    </div>
+    <hr>
+
+    <div class="container-fluid">
+        <div class="bg-secondary-subtle p-5 mt-3 rounded shadow">
+            <h1 class="fw-bold">Hello, world!</h1>
+            <p><strong>HERE!</strong></p>
+            <hr>
+
+            <button class="btn btn-success btn-lg">了解更多</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container-fluid">
+        <div class="bg-secondary-subtle p-5 mt-3 rounded shadow">
+            <h1 class="fw-bold">Hello, world!</h1>
+            <p><strong>HERE!</strong></p>
+            <hr>
+
+            <button class="btn btn-success btn-lg">了解更多</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

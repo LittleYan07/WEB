@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="timer"></h1>
+
+    <script>
+        let timer = document.getElementById("timer");
+
+        let now = new Date();    //Date() = 建構子(建造物件) & 不管let now / let a ...都是Date()物件
+
+        now.getHours();
+        now.getMinutes();
+        now.getSeconds();
+
+        //timer.innerHTML = ˋ${now.getHours()} : ${now.getMinutes()} : ${now.getSeconds()}ˋ
+
+/*         let timeFormat = now => {
+            let h = now.getHours()<10? "0"+ now.getHours() : now.getHours();
+            let m = now.getMinutes()<10? "0"+ now.getMinutes() : now.getMinutes();
+            let s = now.getSeconds()<10? "0"+ now.getSeconds() : now.getSeconds();
+
+            return `${h} : ${m} : ${s}`;
+
+        } */
+
+        //timer.innerHTML = timeFormat(now);
+
+        setInterval(() => {
+            now = new Date();
+            timer.innerHTML = timeFormat(now);
+        }, 1000);
+
+    
+        //////////////////////////////////////////////////
+
+        //使用prototype增加一個方法
+
+        let myDate = new Date();
+
+        Date.prototype.timeFormat = myDate => {
+            let h = now.getHours()<10? "0"+ now.getHours() : now.getHours();
+            let m = now.getMinutes()<10? "0"+ now.getMinutes() : now.getMinutes();
+            let s = now.getSeconds()<10? "0"+ now.getSeconds() : now.getSeconds();
+
+            return `${h} : ${m} : ${s}`;
+
+        }
+
+        Date.prototype.dateFormat = myDate => {
+            let y = myDate.getFullYear() - 1911;
+            let m = myDate.getMonth();
+            let d = myDate.getDate();
+
+            let week = ["日", "一", "二", "三", "四", "五", "六"];
+            let w = week[myDate.getDay()];
+
+            return `民國${y}年${m}月${d}日星期${w}`;
+        }
+
+        setInterval(() => {
+            let myDate = new Date();
+           timer.innerHTML = myDate.dateFormat(myDate) + " " + myDate.timeFormat(myDate);
+        }, 1000);
+
+
+
+
+
+        //物件導向拆開屬性(特徵)跟方法(功能)
+    
+
+        
+
+    </script>
+
+       
+</body>
+</html>

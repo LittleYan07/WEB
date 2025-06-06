@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome My Homepage!</h1>
+    <h1 style="text-decoration: overline;">Welcome My Homepage!</h1>
+
+    <h1 style="text-decoration: underline;">Welcome My Homepage!</h1>
+    <h1><u>Welcome My Homepage!</u></h1>
+    <!-- DOM的樹會不一樣(副節點會不一樣) -->
+
+    <h1 style="text-decoration: line-through;">Welcome My Homepage!</h1>
+
+    <!-- 用在介面變化 -->
+    <h1 style="text-decoration: none;">Welcome My Homepage!</h1>
+    <h1><u style="text-decoration: none;">Welcome My Homepage!</u></h1>
+
+    <h1><a href="#" style="text-decoration: none;">TEST 123!</a></h1>
+    <h1><a href="#" style="text-decoration: none;">test</a></h1>
+
+    <h1><a href="#" style="text-decoration: none; font-size: 2rem; font-weight: 900; color:violet; cursor: text;">TEST
+            123!</a></h1>
+    <hr style="height: 200px; border-color: #642acf; background-color: rgb(214, 197, 195);">
+
+
+    <input type="button" value="小" onclick="toSmall('0.7rem')">
+    <input type="button" value="中" onclick="toDefault('1rem')">
+    <input type="button" value="大" onclick="toLarge('2rem')">
+
+    <div id="news"> <!--  style="font-size:2rem;" -->
+        Google今天公布2024年廣告安全報告，說明如何透過人工智慧（AI）加強對不良廣告的作為，報告提到，2024年Google移除超過51億則廣告、限制超過91億則廣告，並停權超過3920萬個廣告帳戶。
+        Google廣告安全總經理羅德里格斯（Alex
+        Rodriguez）在官方部落格發文表示，在2023年的報告裡，Google使用生成式AI加速內容審查、處置違規者，強化執行政策的能力。在2024年，關鍵進展在於AI不但加強對不良廣告的作為，更提升了阻止詐騙份子進入Google生態系統的能力。
+        羅德里格斯指出，相較於早期需要大量資料進行訓練的機器學習模型，Google最新的大型語言模型（LLM）運作效率更高，只要早期模型所需資訊的一小部分，就能快速識別新興威脅、找出濫用模式，並區別符合規定的商家與詐騙行為。
+    </div>
+
+    <script>
+        var news = document.getElementById("news");
+
+        /*         簡化function */
+        function fontSizeChange(fs) {
+            news.style.fontSize = fs;
+        }
+
+        /*      function toSmall(){
+                    news.style.fontSize="0.7rem";
+                }
+                function toDefault(){
+                    news.style.fontSize="1rem";
+                }
+                function toLarge(){
+                    news.style.fontSize="2rem";
+                } */
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

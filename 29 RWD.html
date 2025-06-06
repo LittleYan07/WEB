@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 版本：5(大).3(中-新增淘汰功能).0(小-修正bug) */
+
+        /* 預設 */
+        div {
+            border: 3px solid #000;
+            background-color: #fbff00;
+            font-size: 1.5rem;
+        }
+
+        /* RWD：一個版本的網頁 for 多個解析度 */
+        /* RWD利用CSS & @media */
+        /* 最大寬度900 = 斷點，之後套用下列樣式*/
+        @media screen and (max-width: 900px) {
+            div {
+                border: 5px solid #ffffff;
+                background-color: #000000;
+                font-size: 3rem;
+                color:rgb(255, 255, 255);
+            }
+
+            h1{
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+
+            div {
+                border: 7px double rgb(22, 191, 233);
+                background-color: rgb(195, 212, 226);
+                font-size: 4rem;
+                color:rgb(0, 0, 0);
+            }
+            h1{
+                display: none;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1>新聞標題</h1>
+        羅馬天主教教宗良十四世十八日在聖伯多祿廣場主持就職彌撒，他在講道時呼籲人類停止剝削大自然資源及邊緣化窮人，以此展開他的教宗任期並奠定基調。
+
+    </div>
+</body>
+
+</html>

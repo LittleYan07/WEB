@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*      var x = "5", y = "3", z = 1, w, r = null;
+
+        a = x + y + z;
+        b = x - y - z;
+        c = w * 5;
+        d = r * 5;
+
+        console.log("a=" + a);
+        console.log("b=" + b);
+        console.log("c=" + c);
+        console.log("d=" + d);
+ */
+        ////////////////////////////////////////////////////
+
+        //變數的scope
+        var a = 5, b = 0;
+        let x = 2, y = 0;
+
+        function cal() {
+            var c = a + b;
+            let z = x + y;
+            console.log(c);
+            console.log(z);
+        }
+        cal();
+
+        //console.log(c);
+        //console.log(z);
+
+        ////////////////////////////////////////////////////
+
+        var f = [];
+
+        for (let i =0; i < 10; i++) {
+            f[i] = function() {
+                console.log(i);
+            }
+        }
+
+        f[2]();
+
+        ////////////////////////////////////////////////////
+
+        let w = function() {
+            console.log(123);
+        }
+
+        w();
+
+        ////////////////////////////////////////////////////
+
+        let q = [];
+            for (let i =0; i < 10; i++) {
+                q[i] = function() {
+                    console.log(i);
+                }
+        }
+
+        w();
+
+        ////////////////////////////////////////////////////
+
+        test();
+        function test() {
+            console.log("abc");
+        }
+
+        test2();
+        function test2() {
+            console.log("abc");
+        }
+
+
+
+    </script>
+</body>
+</html>

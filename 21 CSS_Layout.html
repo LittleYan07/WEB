@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width:1200px;
+            margin: auto;
+            
+        }
+
+        #container>header {
+            background-color:red;
+            height:250px;
+        }
+
+        #container>nav {
+            background-color:blue;
+            height:600px;
+            width:200px;
+            float: left;  /* (Float:把物件浮起來以後 left:向左靠) */
+        }
+
+        #container>section {
+            background-color:yellow;
+            height:600px;
+            width:1000px;
+            float: right;
+        }
+
+        #container>footer {
+            background-color:orange;
+            height:150px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 版面有n塊的話，要用n+1塊div (第n+1塊在最外面包起來) -->
+    <div id="container">
+        <header>
+            top
+        </header>
+
+        <nav>
+            left
+        </nav> <!-- (選單) -->
+
+        <section>
+            right
+        </section>
+
+        <footer>
+            bottom
+        </footer>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
